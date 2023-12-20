@@ -1,0 +1,49 @@
+#include<stdlib.h>
+#include <conio.h>
+#include <iostream>
+#define T 3
+using namespace std;
+void Cambiar_Peso( float toro[]);
+int main()
+{
+ system("COLOR F0");
+ int i;
+ float toros[T]={0};
+ float t;
+ cout<<"\n  CAPTACION DE LOS PESOS \n";
+ for ( i = 0; i < T; i++)
+  {
+    cout<<"\nIngrese el peso del toro : "<<"\t";
+    cin>>t;
+    toros[i] = t;
+  }
+cout<<" Pesos originales de los Toros tabla(toros) \n";
+for ( i = 0; i < T; i++)
+  {
+     cout<<"\nTOROS[" << i<<"]= "<<toros[i];
+  }
+getch();
+//system("cls");
+getch();
+Cambiar_Peso(toros);
+cout<<"\n-------------------------------------------------------------\n";
+cout<<"\n Valores del Vector al dia Siguiente                         \n";
+cout<<"\n-------------------------------------------------------------\n";
+for ( i = 0; i < T; i++)
+  {
+     cout<<"\nTOROS["<<i<<"] = "<<toros[i];
+  }
+getch();
+}
+//Función
+void Cambiar_Peso( float toro[ ])
+{
+ int i;
+ cout<<"\n\n  CAPTACION DE NUEVOS DATOS PARA LA ESTADISTICA\n";
+ for ( i = 0; i < T; i++)
+  {
+    cout<<"\nIngrese el nuevo peso del toro : \t";
+	cin>>toro[i];
+   }
+  return;
+}
